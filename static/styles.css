@@ -57,6 +57,7 @@ h2 {
 
 #information{
     flex: 1;
+    flex-direction: column;
     background-color: var(--bg2);
     border-radius: 1rem;
     padding: 2rem 2rem 2rem 2rem;
@@ -443,28 +444,13 @@ button:hover {
     border-radius: 50%;
     display: inline-block;    
 }
-
-.dot {
-    background-color: var(--text3);
-    animation: bounce 1.3s linear infinite;
+#radar-chart {
+    overflow: visible; /* Allow content to extend beyond container */
+    margin: 20px; /* Reduce excessive margin */
+    min-height: 400px;
+    min-width: 400px;
 }
 
-.dot:nth-child(2) {
-    animation-delay: 0.15s;
-}
-
-.dot:nth-child(3) {
-    animation-delay: 0.3s;
-}
-
-@keyframes bounce {
-    0%,
-    60%,
-    100% {
-        transform: translateY(0);
-    }
-
-    30% {
-        transform: translateY(-5px);
-    }
+#radar-chart svg {
+    overflow: visible; /* Ensure SVG content isn't clipped */
 }
