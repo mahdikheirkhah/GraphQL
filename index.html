@@ -4,43 +4,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GraphQL</title>
-    <link rel="stylesheet" href="./static/styles.css">
-    <link rel="icon" type="image/png" href="static/favicon.png">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="icon" type="image/png" href="./favicon.png">
 </head>
 
 <body>
-    <!-- <canvas id="auroraCanvas"></canvas> -->
-    
-    <div id="login-section" style="display: none">
-        <h2>Login</h2>
-        <input type="text" id="username-or-email" placeholder="Username or E-mail" autocomplete="username">
-        <input type="password" id="password-login" placeholder="Password" autocomplete="current-password">
-        <button id="login-button">Login</button>
-        <p id="errorMessageLogin"></p>
+    <div id="login-section">
+        <div class="login-container">
+            <h2>Login</h2>
+            <input type="text" id="username-or-email" placeholder="Username or E-mail" autocomplete="username">
+            <input type="password" id="password-login" placeholder="Password" autocomplete="current-password">
+            <button id="login-button">Login</button>
+            <p id="errorMessageLogin" class="error-message"></p>
+        </div>
     </div>
 
-
-    <div id="information-section" style="display: none">
-        <h2 id="page-title"></h2>
-            <div id="information">
-                <div id="basic-information"></div>
+    <div id="information-section">
+        <nav id="main-nav">
+            <div id="logged-as">Logged in as X</div>
+            <button id="logout-button">Logout</button>
+        </nav>
+        
+        <main class="dashboard-container">
+            <section class="dashboard-section">
+                <h3 class="section-title">Basic Information</h3>
+                <div id="basic-information" class="info-card"></div>
+            </section>
+            
+            <section class="dashboard-section">
+                <h3 class="section-title">Audit History</h3>
                 <div id="audits" class="audit-cards-container"></div>
-            </div>
-            <div id="messaging-container">
-                <div id="userTooltip" class="tooltip"></div>
-                <p id="logged-as">Logged in as X</p>
-                <button id="logout-button">Logout</button>
-            </div>
-            <div id="chart">
-                <div id="radar-chart"></div>
-                <div id="linear-chart" ></div>
-            </div>
+            </section>
+            
+            <section class="dashboard-section">
+                <h3 class="section-title">Skills</h3>
+                <div id="radar-chart" class="chart-container"></div>
+            </section>
+            
+            <section class="dashboard-section">
+                <h3 class="section-title">XP Progress</h3>
+                <div id="linear-chart" class="chart-container"></div>
+            </section>
+        </main>
     </div>
 
-
-    <script type="module" src="static/realtime.js"></script>
-    <!-- <script src="static/auroras.js"> </script> -->
+    <script type="module" src="./app.js"></script>
 </body>
 
 </html>
