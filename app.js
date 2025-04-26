@@ -138,7 +138,7 @@ async function gettingBasicInforamtion(){
         
         UserID = data.user[0].id;
         loggedAs.innerText = `logged in as ${data.user[0].login}`;
-        await Promise.resolve(); // Ensure previous operations complete
+        await  Promise.resolve(); // Ensure previous operations complete
         calculateXP();
         getGraphData();
     } catch (error) {
@@ -244,6 +244,5 @@ async function getGraphData() {
         }
     });
     document.getElementById('linear-chart').innerHTML = createXPGrowthChart(xp);
-    console.log("graph line:",xp);
-    return xp; 
+    console.log("graph line:",xp); 
 }

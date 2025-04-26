@@ -53,4 +53,8 @@ function clearAllData() {
     // Clear charts
     document.getElementById('radar-chart').innerHTML = '';
     document.getElementById('linear-chart').innerHTML = '';
+
+    document.getElementById('username-or-email').innerHTML = '';
+    document.getElementById('password-login').innerHTML = '';
+    document.getElementById('errorMessageLogin').innerHTML = '';
 }
