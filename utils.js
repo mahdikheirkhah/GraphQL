@@ -54,7 +54,7 @@ function clearAllData() {
     document.getElementById('radar-chart').innerHTML = '';
     document.getElementById('linear-chart').innerHTML = '';
 
-    document.getElementById('username-or-email').innerHTML = '';
-    document.getElementById('password-login').innerHTML = '';
+    document.getElementById('username-or-email').innerText = '';
+    document.getElementById('password-login').innerText = '';
     document.getElementById('errorMessageLogin').innerHTML = '';
 }
