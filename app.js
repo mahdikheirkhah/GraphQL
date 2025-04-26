@@ -138,6 +138,7 @@ async function gettingBasicInforamtion(){
         
         UserID = data.user[0].id;
         loggedAs.innerText = `logged in as ${data.user[0].login}`;
+        await Promise.resolve(); // Ensure previous operations complete
         calculateXP();
         getGraphData();
     } catch (error) {
