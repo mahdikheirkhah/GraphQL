@@ -20,7 +20,6 @@ A personal profile dashboard that displays school information by querying a Grap
   - **Radar Chart**: Visualizes skill distribution
   - **Line Chart**: Shows XP progression over time
   - Both charts implemented with SVG
-  - Interactive elements for better data exploration
 
 - **Technical Implementation**
   - GraphQL queries (simple, nested, and with arguments)
