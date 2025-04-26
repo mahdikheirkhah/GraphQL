@@ -41,7 +41,7 @@ A personal profile dashboard that displays school information by querying a Grap
 - Authentication: `https://01.gritlab.ax/api/auth/signin`
 
 ## Project Structure
-
+```
 GraphQL/
 │
 ├── index.html
