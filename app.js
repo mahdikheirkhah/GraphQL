@@ -19,7 +19,7 @@ async function login() {
         }
     })
     .then(res => {
-        if (!res.ok) throw new Error("");
+        if (!res.ok) throw new Error("Invalid credentials") ;
         return res.text();
     })
     .then(jwt => {
