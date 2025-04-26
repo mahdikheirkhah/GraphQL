@@ -60,7 +60,7 @@ GraphQL/
 1. Clone the repository:
    ```bash
    git clone https://github.com/mahdikheirkhah/GraphQL.git
-```
+   ```
 2. Open the project in your browser:
     Simply open index.html in a modern browser
 
