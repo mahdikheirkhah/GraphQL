@@ -53,9 +53,8 @@ export function logout() {
 function showInformation() {
     document.getElementById('login-section').style.display = 'none';
     document.getElementById('information-section').style.display = 'block';
-    // First get basic info
     gettingBasicInforamtion();
-    calculateXP();
+
     gettingSkills();
     gettingAuditors();
     
@@ -139,7 +138,7 @@ async function gettingBasicInforamtion(){
         
         UserID = data.user[0].id;
         loggedAs.innerText = `logged in as ${data.user[0].login}`;
-        
+        calculateXP();
         getGraphData();
     } catch (error) {
         console.error("Data request failed:", error);
